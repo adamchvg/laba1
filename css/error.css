@@ -1,0 +1,107 @@
+
+.bg-img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background: radial-gradient(circle, #240015 0%, #12000b 100%);
+    overflow: hidden;
+  }
+  h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 150px;
+    font-size: 32px;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    display: block;
+    color: #12000a;
+    font-weight: 300;
+    text-shadow: 0px 0px 4px #12000a;
+    animation: fadeInText 3s ease-in 3.5s forwards, flicker 3s linear 4s infinite;
+  }
+  .btn {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    background: radial-gradient(circle, #32001d 0%, #12000b 100%);
+  }
+  .btn>a {
+    text-transform: uppercase;
+    animation: flickerLink 2s linear 2s infinite;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+  }
+  
+  #svgWrap_1,
+  #svgWrap_2{
+    position: absolute;
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #id1_1,
+#id3_1{
+  stroke: #ff005d;
+  stroke-width: 3px;
+  filter:url(#glow);
+  animation: flicker 4s linear 4.5s infinite;
+
+}
+#id2_1{
+    stroke-width: 3px;
+    stroke: #8f00d1;
+    filter:url(#glow);
+  }
+  @keyframes flicker {
+    0%  {stroke: #ff005d;}
+    1%  {stroke: transparent;}
+    3%  {stroke: transparent;}
+    4%  {stroke: #ff005d;}
+    6%  {stroke: #ff005d;}
+    7%  {stroke: transparent;}
+    18% {stroke: #ff005d;}
+    16% {stroke: #ff005d;}
+    17%  {stroke: transparent;}
+    25%  {stroke: transparent;}
+    70% {stroke: #ff005d;}
+    100%{stroke: #ff005d;}
+  }
+  @keyframes flickerLink {
+    0%  {color: #000000;}
+    1%  {color: transparent;}
+    4%  {color: #ff005d;}
+    6%  {color: #ff005d;}
+    7%  {color: transparent;}
+    10% {color: transparent;}
+    12% {color: transparent;}
+    14% {color: #ff005d;}
+    17% {color: #ff005d;}
+    45% {color: transparent;}
+    55% {color: transparent;}
+    57% {color: #ff005d;}
+    100%{color: #ff005d;}
+  }
+  @keyframes fadeInText{
+    1%  {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+    20% {color: #ff005d;text-shadow:0px 0px 14px #ff005d;}
+    100%{color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  }
+  

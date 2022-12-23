@@ -1,0 +1,216 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+  }
+  
+  .container {
+    max-width: 900px;
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  input {
+    outline: none;
+  }
+  
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  section#formHolder {
+    padding: 50px 0;
+  }
+  
+  .brand {
+    padding: 20px;
+    background: #222222 url(../photo/main-screen__bgc.png) no-repeat center center;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    min-height: 540px;
+    position: relative;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  .brand::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+  }
+  .brand .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: all 0.6s;
+  }
+  .brand .heading h2 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .brand .heading p {
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;  
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .form {
+    position: relative;
+  }
+  .form .form-peice {
+    background: #121212;
+    min-height: 480px;
+    margin-top: 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    color: #bbbbbb;
+    padding: 30px 0 60px;
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 130%;
+    overflow: hidden;
+  }
+  .form form {
+    padding: 0 40px;
+    margin: 0;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+  .form form .form-group {
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .form form label {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    transform: translateY(40px);
+    transition: all 0.4s;
+    cursor: text;
+    z-index: -1;
+  }
+  .form form label:hover, .form form label:focus {
+    color: #121212;
+  }
+  .form form label.active {
+    transform: translateY(10px);
+    font-size: 10px;
+  }
+
+  .form form input:not([type=submit]) {
+    background: none;
+    outline: none;
+    border: none;
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    z-index: 1;
+  }
+
+  .form form input[type=password] {
+    color: #f95959;
+  }
+  .form form .CTA {
+    margin-top: 30px;
+  }
+  .form form .CTA input {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 30px;
+    background: #f95959;
+    color: #fff;
+    border-radius: 30px;
+    margin-right: 20px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+  }
+  .form form .CTA button {
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    color: #fff;
+    border-radius: 30px;
+    margin-right: 20px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .form form .CTA button a {
+    color: #121212;
+    opacity: 0.8;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      overflow: hidden;
+    }
+    section#formHolder {
+      padding: 0;
+    }
+    section#formHolder div.brand {
+      min-height: 200px !important;
+    }
+    section#formHolder div.brand h2 {
+      font-size: 36px;
+    }
+    section#formHolder div.brand p {
+      position: relative;
+      top: 15px;
+    }
+    section#formHolder .form {
+      width: 80vw;
+      min-height: 500px;
+      margin-left: 10vw;
+    }
+    section#formHolder .form .form-peice {
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+    }
+
+    section#formHolder .form .form-peice > form {
+      width: 100%;
+      padding: 60px;
+      left: 50%;
+    }
+  }
+  @media (max-width: 480px) {
+    section#formHolder .form {
+      width: 100vw;
+      margin-left: 0;
+    }
+    form button {
+      margin-top: 10px;
+    }
+
+  }
